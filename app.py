@@ -4,7 +4,7 @@ import cv2
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET','POST'])
 def detect_face():
     # Check if the request contains the 'file' field
     if 'file' not in request.files:
