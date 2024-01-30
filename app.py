@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import numpy as np
 import cv2
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 @app.route('/', methods=['GET','POST'])
 def detect_face():
