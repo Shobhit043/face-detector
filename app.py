@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 
 app = Flask(__name__)
-CORS(app, origins=['https://facedetectorfrontend.onrender.com', 'http://localhost:5173'])
+CORS(app)
 
 @app.route('/', methods=['GET','POST'])
 def detect_face():
